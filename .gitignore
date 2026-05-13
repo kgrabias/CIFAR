@@ -1,5 +1,5 @@
 data/
 .venv/
-*.pth            #ignroujemy modele
-!best10.pth       # poza najlepszymi
-!best100.pth    
+*.pth
+!models10/best10.pth
+!models100/best100.pth

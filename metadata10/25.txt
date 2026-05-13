@@ -1,0 +1,122 @@
+{
+  "network_architecture": "ConvNet(\n  (features): Sequential(\n    (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (2): ReLU()\n    (3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (4): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (5): ReLU()\n    (6): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (7): Dropout(p=0.2, inplace=False)\n    (8): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (9): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (10): ReLU()\n    (11): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (12): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (13): ReLU()\n    (14): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (15): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (16): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (17): ReLU()\n    (18): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (19): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (20): ReLU()\n    (21): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n  )\n  (classifier): Sequential(\n    (0): Flatten(start_dim=1, end_dim=-1)\n    (1): Linear(in_features=2048, out_features=128, bias=True)\n    (2): ReLU()\n    (3): Linear(in_features=128, out_features=10, bias=True)\n  )\n)",
+  "optimizer": "Adam",
+  "learning_rate": 1e-05,
+  "scheduler": "ReduceLROnPlateau",
+  "scheduler_params": {
+    "mode": "min",
+    "factor": 0.1,
+    "patience": 2,
+    "min_lr": 1e-05,
+    "threshold": 0.02,
+    "cooldown": 0
+  },
+  "batch_size": 256,
+  "training_log": [
+    {
+      "epoch": 1,
+      "accuracy": 60.629999999999995,
+      "avg_loss": 1.093168406188488
+    },
+    {
+      "epoch": 2,
+      "accuracy": 73.0,
+      "avg_loss": 0.7767028555274009
+    },
+    {
+      "epoch": 3,
+      "accuracy": 71.45,
+      "avg_loss": 0.8548271417617798
+    },
+    {
+      "epoch": 4,
+      "accuracy": 74.00999999999999,
+      "avg_loss": 0.769443898261348
+    },
+    {
+      "epoch": 5,
+      "accuracy": 74.83,
+      "avg_loss": 0.7391850699352313
+    },
+    {
+      "epoch": 6,
+      "accuracy": 77.51,
+      "avg_loss": 0.6700966214831872
+    },
+    {
+      "epoch": 7,
+      "accuracy": 78.74,
+      "avg_loss": 0.6452443294132812
+    },
+    {
+      "epoch": 8,
+      "accuracy": 80.54,
+      "avg_loss": 0.5580490284664615
+    },
+    {
+      "epoch": 9,
+      "accuracy": 80.58999999999999,
+      "avg_loss": 0.5915322379701456
+    },
+    {
+      "epoch": 10,
+      "accuracy": 81.58,
+      "avg_loss": 0.5705510812580206
+    },
+    {
+      "epoch": 11,
+      "accuracy": 81.56,
+      "avg_loss": 0.5886244749187663
+    },
+    {
+      "epoch": 12,
+      "accuracy": 84.76,
+      "avg_loss": 0.48699036117192285
+    },
+    {
+      "epoch": 13,
+      "accuracy": 84.96000000000001,
+      "avg_loss": 0.4824265016681829
+    },
+    {
+      "epoch": 14,
+      "accuracy": 84.89,
+      "avg_loss": 0.4962017449793542
+    },
+    {
+      "epoch": 15,
+      "accuracy": 85.08,
+      "avg_loss": 0.5049227310024249
+    },
+    {
+      "epoch": 16,
+      "accuracy": 85.11999999999999,
+      "avg_loss": 0.4994528571701354
+    },
+    {
+      "epoch": 17,
+      "accuracy": 85.21,
+      "avg_loss": 0.4949267984955174
+    },
+    {
+      "epoch": 18,
+      "accuracy": 85.34,
+      "avg_loss": 0.49799866082182354
+    },
+    {
+      "epoch": 19,
+      "accuracy": 84.95,
+      "avg_loss": 0.508119671825011
+    },
+    {
+      "epoch": 20,
+      "accuracy": 85.09,
+      "avg_loss": 0.5041664051497059
+    },
+    {
+      "epoch": 21,
+      "accuracy": 85.11999999999999,
+      "avg_loss": 0.5079599573828613
+    }
+  ]
+}

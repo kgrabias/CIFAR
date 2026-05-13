@@ -1,0 +1,142 @@
+{
+  "network_architecture": "ConvNet(\n  (features): Sequential(\n    (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (2): ReLU()\n    (3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (4): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (5): ReLU()\n    (6): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (7): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (8): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (9): ReLU()\n    (10): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (11): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (12): ReLU()\n    (13): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (14): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (15): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (16): ReLU()\n    (17): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (18): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (19): ReLU()\n    (20): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n  )\n  (classifier): Sequential(\n    (0): Flatten(start_dim=1, end_dim=-1)\n    (1): Linear(in_features=2048, out_features=128, bias=True)\n    (2): ReLU()\n    (3): Linear(in_features=128, out_features=10, bias=True)\n  )\n)",
+  "optimizer": "Adam",
+  "learning_rate": 2.5e-05,
+  "scheduler": "ReduceLROnPlateau",
+  "scheduler_params": {
+    "mode": "min",
+    "factor": 0.2,
+    "patience": 3,
+    "min_lr": 2.5e-05,
+    "threshold": 0.025,
+    "cooldown": 0
+  },
+  "batch_size": 256,
+  "training_log": [
+    {
+      "epoch": 1,
+      "accuracy": 58.589999999999996,
+      "avg_loss": 1.1818717449903489
+    },
+    {
+      "epoch": 2,
+      "accuracy": 62.370000000000005,
+      "avg_loss": 1.1320151269435883
+    },
+    {
+      "epoch": 3,
+      "accuracy": 65.46,
+      "avg_loss": 1.1820181474089622
+    },
+    {
+      "epoch": 4,
+      "accuracy": 77.39,
+      "avg_loss": 0.6777159571647644
+    },
+    {
+      "epoch": 5,
+      "accuracy": 73.83999999999999,
+      "avg_loss": 0.7715140196341502
+    },
+    {
+      "epoch": 6,
+      "accuracy": 80.41,
+      "avg_loss": 0.5998354233518431
+    },
+    {
+      "epoch": 7,
+      "accuracy": 78.64999999999999,
+      "avg_loss": 0.6663777907437916
+    },
+    {
+      "epoch": 8,
+      "accuracy": 81.01,
+      "avg_loss": 0.6168071193785607
+    },
+    {
+      "epoch": 9,
+      "accuracy": 80.36999999999999,
+      "avg_loss": 0.6056859396445523
+    },
+    {
+      "epoch": 10,
+      "accuracy": 80.44,
+      "avg_loss": 0.6382765549762993
+    },
+    {
+      "epoch": 11,
+      "accuracy": 85.11999999999999,
+      "avg_loss": 0.5286320759232637
+    },
+    {
+      "epoch": 12,
+      "accuracy": 85.63,
+      "avg_loss": 0.5530539407471943
+    },
+    {
+      "epoch": 13,
+      "accuracy": 84.82,
+      "avg_loss": 0.6138385087132644
+    },
+    {
+      "epoch": 14,
+      "accuracy": 84.21,
+      "avg_loss": 0.6721062191282979
+    },
+    {
+      "epoch": 15,
+      "accuracy": 84.46000000000001,
+      "avg_loss": 0.7149414642931173
+    },
+    {
+      "epoch": 16,
+      "accuracy": 85.22,
+      "avg_loss": 0.686883697827784
+    },
+    {
+      "epoch": 17,
+      "accuracy": 85.22999999999999,
+      "avg_loss": 0.6932652078497524
+    },
+    {
+      "epoch": 18,
+      "accuracy": 85.17,
+      "avg_loss": 0.7244638152801381
+    },
+    {
+      "epoch": 19,
+      "accuracy": 85.11999999999999,
+      "avg_loss": 0.7364899139887038
+    },
+    {
+      "epoch": 20,
+      "accuracy": 85.21,
+      "avg_loss": 0.7441631574540759
+    },
+    {
+      "epoch": 21,
+      "accuracy": 85.35000000000001,
+      "avg_loss": 0.760139867609825
+    },
+    {
+      "epoch": 22,
+      "accuracy": 85.28999999999999,
+      "avg_loss": 0.7682574421417313
+    },
+    {
+      "epoch": 23,
+      "accuracy": 85.41,
+      "avg_loss": 0.7789958891676019
+    },
+    {
+      "epoch": 24,
+      "accuracy": 85.31,
+      "avg_loss": 0.7882724411238116
+    },
+    {
+      "epoch": 25,
+      "accuracy": 85.04,
+      "avg_loss": 0.8015252592833564
+    }
+  ]
+}

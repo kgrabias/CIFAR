@@ -1,0 +1,107 @@
+{
+  "network_architecture": "ConvNet(\n  (features): Sequential(\n    (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (2): ReLU()\n    (3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (4): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (5): ReLU()\n    (6): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (7): Dropout(p=0.2, inplace=False)\n    (8): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (9): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (10): ReLU()\n    (11): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (12): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (13): ReLU()\n    (14): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (15): Dropout(p=0.3, inplace=False)\n    (16): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (17): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (18): ReLU()\n    (19): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (20): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (21): ReLU()\n    (22): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (23): Dropout(p=0.4, inplace=False)\n  )\n  (classifier): Sequential(\n    (0): Flatten(start_dim=1, end_dim=-1)\n    (1): Linear(in_features=2048, out_features=128, bias=True)\n    (2): ReLU()\n    (3): Dropout(p=0.25, inplace=False)\n    (4): Linear(in_features=128, out_features=10, bias=True)\n  )\n)",
+  "optimizer": "AdamW",
+  "learning_rate": 0.001,
+  "scheduler": "ReduceLROnPlateau",
+  "scheduler_params": {
+    "mode": "min",
+    "factor": 0.1,
+    "patience": 1,
+    "min_lr": 1e-05,
+    "threshold": 0.012,
+    "cooldown": 1
+  },
+  "batch_size": 256,
+  "training_log": [
+    {
+      "epoch": 1,
+      "accuracy": 56.089999999999996,
+      "avg_loss": 1.1815309256315232
+    },
+    {
+      "epoch": 2,
+      "accuracy": 59.24,
+      "avg_loss": 1.1554676324129105
+    },
+    {
+      "epoch": 3,
+      "accuracy": 72.39,
+      "avg_loss": 0.7843022188053855
+    },
+    {
+      "epoch": 4,
+      "accuracy": 71.86,
+      "avg_loss": 0.816499867016756
+    },
+    {
+      "epoch": 5,
+      "accuracy": 74.94,
+      "avg_loss": 0.7133912342258647
+    },
+    {
+      "epoch": 6,
+      "accuracy": 76.36,
+      "avg_loss": 0.6764733654678248
+    },
+    {
+      "epoch": 7,
+      "accuracy": 80.25,
+      "avg_loss": 0.5782876479777561
+    },
+    {
+      "epoch": 8,
+      "accuracy": 80.61,
+      "avg_loss": 0.5808596516111094
+    },
+    {
+      "epoch": 9,
+      "accuracy": 81.91000000000001,
+      "avg_loss": 0.5240053673079059
+    },
+    {
+      "epoch": 10,
+      "accuracy": 82.96,
+      "avg_loss": 0.4941767220664176
+    },
+    {
+      "epoch": 11,
+      "accuracy": 81.73,
+      "avg_loss": 0.5375113823231618
+    },
+    {
+      "epoch": 12,
+      "accuracy": 83.42,
+      "avg_loss": 0.49833677452840625
+    },
+    {
+      "epoch": 13,
+      "accuracy": 86.1,
+      "avg_loss": 0.41879886815882034
+    },
+    {
+      "epoch": 14,
+      "accuracy": 86.06,
+      "avg_loss": 0.41276203959610813
+    },
+    {
+      "epoch": 15,
+      "accuracy": 86.42999999999999,
+      "avg_loss": 0.4115219143735375
+    },
+    {
+      "epoch": 16,
+      "accuracy": 86.53999999999999,
+      "avg_loss": 0.40901393011497084
+    },
+    {
+      "epoch": 17,
+      "accuracy": 86.47,
+      "avg_loss": 0.41097855710299913
+    },
+    {
+      "epoch": 18,
+      "accuracy": 86.42,
+      "avg_loss": 0.4124467455467601
+    }
+  ]
+}
