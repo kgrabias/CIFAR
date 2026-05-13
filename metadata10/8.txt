@@ -1,0 +1,97 @@
+{
+  "network_architecture": "ConvNet(\n  (features): Sequential(\n    (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (2): ReLU()\n    (3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (4): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (5): ReLU()\n    (6): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (7): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (8): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (9): ReLU()\n    (10): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (11): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (12): ReLU()\n    (13): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (14): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (15): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (16): ReLU()\n    (17): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (18): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (19): ReLU()\n    (20): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n  )\n  (classifier): Sequential(\n    (0): Flatten(start_dim=1, end_dim=-1)\n    (1): Linear(in_features=2048, out_features=1024, bias=True)\n    (2): ReLU()\n    (3): Linear(in_features=1024, out_features=1024, bias=True)\n    (4): ReLU()\n    (5): Linear(in_features=1024, out_features=512, bias=True)\n    (6): ReLU()\n    (7): Linear(in_features=512, out_features=512, bias=True)\n    (8): ReLU()\n    (9): Linear(in_features=512, out_features=10, bias=True)\n  )\n)",
+  "optimizer": "RAdam",
+  "learning_rate": 2.6999999999999996e-05,
+  "scheduler": "ReduceLROnPlateau",
+  "scheduler_params": {
+    "mode": "max",
+    "factor": 0.3,
+    "patience": 2,
+    "min_lr": 1e-05,
+    "threshold": 0.01,
+    "cooldown": 1
+  },
+  "batch_size": 32,
+  "training_log": [
+    {
+      "epoch": 1,
+      "accuracy": 61.25000000000001,
+      "avg_loss": 1.197425673183161
+    },
+    {
+      "epoch": 2,
+      "accuracy": 70.78999999999999,
+      "avg_loss": 0.9144373087646862
+    },
+    {
+      "epoch": 3,
+      "accuracy": 76.68,
+      "avg_loss": 0.73324740570955
+    },
+    {
+      "epoch": 4,
+      "accuracy": 76.64999999999999,
+      "avg_loss": 0.7238287624364463
+    },
+    {
+      "epoch": 5,
+      "accuracy": 83.42,
+      "avg_loss": 0.5246980525434207
+    },
+    {
+      "epoch": 6,
+      "accuracy": 84.0,
+      "avg_loss": 0.5172383258232294
+    },
+    {
+      "epoch": 7,
+      "accuracy": 83.97,
+      "avg_loss": 0.5731220421985316
+    },
+    {
+      "epoch": 8,
+      "accuracy": 84.11,
+      "avg_loss": 0.6001407919695583
+    },
+    {
+      "epoch": 9,
+      "accuracy": 84.86,
+      "avg_loss": 0.6677932358278443
+    },
+    {
+      "epoch": 10,
+      "accuracy": 84.92,
+      "avg_loss": 0.8058515916141077
+    },
+    {
+      "epoch": 11,
+      "accuracy": 84.61,
+      "avg_loss": 0.886909013926483
+    },
+    {
+      "epoch": 12,
+      "accuracy": 84.27,
+      "avg_loss": 0.9663547025249598
+    },
+    {
+      "epoch": 13,
+      "accuracy": 84.52,
+      "avg_loss": 1.0848607053391088
+    },
+    {
+      "epoch": 14,
+      "accuracy": 84.77,
+      "avg_loss": 1.2017176879909093
+    },
+    {
+      "epoch": 15,
+      "accuracy": 84.43,
+      "avg_loss": 1.2699116519607676
+    },
+    {
+      "epoch": 16,
+      "accuracy": 84.45,
+      "avg_loss": 1.3619198272668254
+    }
+  ]
+}
