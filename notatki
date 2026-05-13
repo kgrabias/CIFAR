@@ -1,0 +1,13 @@
+batch_size = 16 nie zwiększył maksymalnej dokładności w porównaniu do 32, za to szybciej (w liczbie epok, później czasowo) została osiągnięta 
+batch_size = 64 nieznacznie zwiększył dokładność w porównaniu do 32, została szybciej osiągnięta (w obu znaczeniach)
+batch_size = 128 nieznacznie zmniejszył dokładność w porównaniu do 64, została szybciej osiągnięta (czasowo).
+Dokładność 32 podobna do 128, ale 128 dużo szybsze. 64 trochę dokładniejsze niż 32 i 128.
+przy batch_size = 256 trening jest bardzo szybki, dokładność trochę spada.
+Pomyślałem o zmiennym batch_size i to wdrożyłem.
+W ten sposób udało się minimalnie poprawić dokładność, za to o wiele skrócić czas treningu (z 20min do 4min).
+batch_size nie zapisuje się sam w metadata. Jeśli jest 256 lub 512 to znaczy, że był zmienny.
+do 28 notatnika źle się też zapisywał learning rate - końcowy, a nie początkowy.
+Na początku zajarałem się dropoutem, później kompletnie zawiodłem, ale na koniec okazuje się, że
+delikatny dropout pomaga.
+
+najlepsze wyniki: 1,27,30,33
