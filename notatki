@@ -10,4 +10,5 @@ do 28 notatnika źle się też zapisywał learning rate - końcowy, a nie począ
 Na początku zajarałem się dropoutem, później kompletnie zawiodłem, ale na koniec okazuje się, że
 delikatny dropout pomaga.
 
-najlepsze wyniki: 1,27,30,33
+najlepsze wyniki: 1,27,30,33,39!,
+a w C100: 9,

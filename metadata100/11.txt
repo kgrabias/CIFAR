@@ -1,0 +1,182 @@
+{
+  "network_architecture": "ConvNet(\n  (features): Sequential(\n    (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (2): ReLU(inplace=True)\n    (3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (4): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (5): ReLU(inplace=True)\n    (6): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (7): Dropout(p=0.2, inplace=False)\n    (8): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (9): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (10): ReLU(inplace=True)\n    (11): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (12): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (13): ReLU(inplace=True)\n    (14): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (15): Dropout(p=0.3, inplace=False)\n    (16): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (17): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (18): ReLU()\n    (19): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (20): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (21): ReLU(inplace=True)\n    (22): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (23): Dropout(p=0.4, inplace=False)\n  )\n  (classifier): Sequential(\n    (0): Flatten(start_dim=1, end_dim=-1)\n    (1): Linear(in_features=2048, out_features=512, bias=True)\n    (2): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    (3): ReLU()\n    (4): Dropout(p=0.5, inplace=False)\n    (5): Linear(in_features=512, out_features=100, bias=True)\n  )\n)",
+  "optimizer": "RAdam",
+  "learning_rate": 0.0015,
+  "scheduler": "ReduceLROnPlateau",
+  "scheduler_params": {
+    "mode": "min",
+    "factor": 0.1,
+    "patience": 1,
+    "min_lr": 1e-06,
+    "threshold": 0.02,
+    "cooldown": 1
+  },
+  "batch_size": 512,
+  "training_log": [
+    {
+      "epoch": 1,
+      "accuracy": 8.6,
+      "avg_loss": 4.1032204866409305
+    },
+    {
+      "epoch": 2,
+      "accuracy": 17.87,
+      "avg_loss": 3.551577079296112
+    },
+    {
+      "epoch": 3,
+      "accuracy": 24.75,
+      "avg_loss": 3.0979474544525147
+    },
+    {
+      "epoch": 4,
+      "accuracy": 28.689999999999998,
+      "avg_loss": 2.9119661688804626
+    },
+    {
+      "epoch": 5,
+      "accuracy": 31.28,
+      "avg_loss": 2.6797109663486482
+    },
+    {
+      "epoch": 6,
+      "accuracy": 38.74,
+      "avg_loss": 2.3529630839824676
+    },
+    {
+      "epoch": 7,
+      "accuracy": 42.0,
+      "avg_loss": 2.2152993023395537
+    },
+    {
+      "epoch": 8,
+      "accuracy": 41.13,
+      "avg_loss": 2.2583600723060075
+    },
+    {
+      "epoch": 9,
+      "accuracy": 45.78,
+      "avg_loss": 2.030699921261733
+    },
+    {
+      "epoch": 10,
+      "accuracy": 47.9,
+      "avg_loss": 1.915071931614238
+    },
+    {
+      "epoch": 11,
+      "accuracy": 49.74,
+      "avg_loss": 1.8551485743492273
+    },
+    {
+      "epoch": 12,
+      "accuracy": 50.980000000000004,
+      "avg_loss": 1.7916014323568648
+    },
+    {
+      "epoch": 13,
+      "accuracy": 52.410000000000004,
+      "avg_loss": 1.7198738626613739
+    },
+    {
+      "epoch": 14,
+      "accuracy": 53.55,
+      "avg_loss": 1.661605429497494
+    },
+    {
+      "epoch": 15,
+      "accuracy": 53.080000000000005,
+      "avg_loss": 1.6910945458914906
+    },
+    {
+      "epoch": 16,
+      "accuracy": 53.900000000000006,
+      "avg_loss": 1.6995096336157558
+    },
+    {
+      "epoch": 17,
+      "accuracy": 58.650000000000006,
+      "avg_loss": 1.4751827423564923
+    },
+    {
+      "epoch": 18,
+      "accuracy": 59.29,
+      "avg_loss": 1.4505644120728245
+    },
+    {
+      "epoch": 19,
+      "accuracy": 59.919999999999995,
+      "avg_loss": 1.4372087313344304
+    },
+    {
+      "epoch": 20,
+      "accuracy": 60.17,
+      "avg_loss": 1.4240466207741929
+    },
+    {
+      "epoch": 21,
+      "accuracy": 60.040000000000006,
+      "avg_loss": 1.411279745376148
+    },
+    {
+      "epoch": 22,
+      "accuracy": 60.36,
+      "avg_loss": 1.4101368030800987
+    },
+    {
+      "epoch": 23,
+      "accuracy": 60.79,
+      "avg_loss": 1.4009952773682226
+    },
+    {
+      "epoch": 24,
+      "accuracy": 60.57,
+      "avg_loss": 1.3929774328923454
+    },
+    {
+      "epoch": 25,
+      "accuracy": 60.8,
+      "avg_loss": 1.3940493363541917
+    },
+    {
+      "epoch": 26,
+      "accuracy": 60.46,
+      "avg_loss": 1.4028157536595012
+    },
+    {
+      "epoch": 27,
+      "accuracy": 60.699999999999996,
+      "avg_loss": 1.393917414136588
+    },
+    {
+      "epoch": 28,
+      "accuracy": 60.68,
+      "avg_loss": 1.3951265391069478
+    },
+    {
+      "epoch": 29,
+      "accuracy": 60.69,
+      "avg_loss": 1.3932949571182933
+    },
+    {
+      "epoch": 30,
+      "accuracy": 60.67,
+      "avg_loss": 1.398145907793563
+    },
+    {
+      "epoch": 31,
+      "accuracy": 60.46,
+      "avg_loss": 1.3993345864664632
+    },
+    {
+      "epoch": 32,
+      "accuracy": 60.64000000000001,
+      "avg_loss": 1.3930333012970872
+    },
+    {
+      "epoch": 33,
+      "accuracy": 60.64000000000001,
+      "avg_loss": 1.3964200204553696
+    }
+  ]
+}
